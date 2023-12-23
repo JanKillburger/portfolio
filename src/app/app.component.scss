@@ -1,0 +1,9 @@
+@import "../assets/styles/variables";
+
+.scroll-target {
+    scroll-margin-block-start: $header-height;
+}
+
+.top-level-element {
+    padding-inline: $global-padding-inline;
+}

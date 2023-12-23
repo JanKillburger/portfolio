@@ -1,0 +1,36 @@
+<div class="main">
+  <header class="header">
+    <img src="../../assets/img/logo.png" alt="Jan Killburger logo" />
+    <button class="menu-toggle" type="button" (click)="toggleMenu()"></button>
+  </header>
+  <div class="menu-wrapper" *ngIf="menuOpen">
+    <div class="spacer"></div>
+    <nav>
+      <ul>
+        <li *ngFor="let item of menuItems">
+          <a [href]="item.href" class="header-link" (click)="toggleMenu()">
+            {{ item.text }}
+          </a>
+          <div class="link-decorator"></div>
+        </li>
+      </ul>
+    </nav>
+    <div class="contact">
+      <a href="#say-hi" class="header-link header-link-dark" (click)="toggleMenu()">Say Hi!</a>
+      <div class="contact-footer">
+        <a href="#say-hi" (click)="toggleMenu()">jkillburger&#64;gmail.com</a>
+        <div class="social-media">
+          <a href="#">
+            <img src="../../assets/img/github-button.png" alt="Go to Github">
+          </a>
+          <a href="#say-hi" (click)="toggleMenu()">
+            <img src="../../assets/img/email-button.png" alt="Contact me">
+          </a>
+          <a href="#">
+            <img src="../../assets/img/linkedin-button.png" alt="Go to LinkedIn">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
