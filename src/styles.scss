@@ -76,6 +76,10 @@ body {
   max-inline-size: 1440px;
   margin: 0 auto;
   min-height: 200vh;
+
+  &.is-hidden {
+    overflow: hidden;
+  }
 }
 
 h1,

@@ -4,6 +4,8 @@
     position: sticky;
     top: 0;
     background-color: white;
+    max-height: 100vh;
+    overflow: auto;
 }
 
 .header {
@@ -25,8 +27,6 @@
 }
 
 .menu-wrapper {
-    width: 100%;
-    background-color: white;
 
     .spacer {
         height: 0px;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
+  bodyElement = document.querySelector('body');
   menuOpen = false;
   menuItems = [
     {
@@ -23,5 +24,6 @@ export class MenuComponent {
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+    this.bodyElement?.classList.toggle('is-hidden');
   }
 }
