@@ -1,17 +1,16 @@
-<div class="main">
   <header class="header">
-    <img src="../../assets/img/logo.png" alt="Jan Killburger logo" />
+    <img src="assets/img/logo.png" alt="Jan Killburger logo" />
     <button class="menu-toggle" type="button" (click)="toggleMenu()"></button>
   </header>
-  <div class="menu-wrapper" *ngIf="menuOpen">
-    <div class="spacer"></div>
+  <div class="menu-wrapper" [class.is-open]="menuOpen" [class.is-closed]="!menuOpen">
+    <!-- <div class="spacer" [class.collapsed]="menuOpen" [class.expanded]="!menuOpen"></div> -->
     <nav>
       <ul>
-        <li *ngFor="let item of menuItems">
-          <a [href]="item.href" class="header-link" (click)="toggleMenu()">
-            {{ item.text }}
+        <li *ngFor="let item of menuItems" class="header-link">
+          <a [href]="item.href" (click)="toggleMenu()">
+            <span [innerHTML]="item.text"></span>
+            <div class="link-decorator"></div>
           </a>
-          <div class="link-decorator"></div>
         </li>
       </ul>
     </nav>
@@ -21,16 +20,15 @@
         <a href="#say-hi" (click)="toggleMenu()">jkillburger&#64;gmail.com</a>
         <div class="social-media">
           <a href="#">
-            <img src="../../assets/img/github-button.png" alt="Go to Github">
+            <img src="assets/img/github-button.png" alt="Go to Github">
           </a>
           <a href="#say-hi" (click)="toggleMenu()">
-            <img src="../../assets/img/email-button.png" alt="Contact me">
+            <img src="assets/img/email-button.png" alt="Contact me">
           </a>
           <a href="#">
-            <img src="../../assets/img/linkedin-button.png" alt="Go to LinkedIn">
+            <img src="assets/img/linkedin-button.png" alt="Go to LinkedIn">
           </a>
         </div>
       </div>
     </div>
   </div>
-</div>

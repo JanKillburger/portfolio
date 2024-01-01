@@ -1,11 +1,10 @@
 @import "../../assets/styles/variables";
 
-.main {
-    position: sticky;
+:host {
+    position: fixed;
     top: 0;
+    width: min(100vw, $max-inline-size);
     background-color: white;
-    max-height: 100vh;
-    overflow: auto;
 }
 
 .header {
@@ -27,9 +26,46 @@
 }
 
 .menu-wrapper {
+    position: fixed;
+    max-height: calc(100vh - $header-height);
+    width: min(100vw, $max-inline-size);
+    background-color: white;
+    overflow: auto;
 
-    .spacer {
-        height: 0px;
+    &.is-closed {
+        animation: hide-menu 0.5s ease-in-out forwards;
+    }
+
+    @keyframes hide-menu {
+        from {
+            opacity: 1;
+            top: $header-height;
+        }
+
+        to {
+            opacity: 0;
+            top: 100vh;
+        }
+    }
+
+    &.is-open {
+        animation: show-menu 0.5s ease-in-out forwards;
+    }
+
+    @keyframes show-menu {
+        from {
+            opacity: 0;
+            top: 100vh;
+        }
+
+        to {
+            opacity: 1;
+            top: $header-height;
+        }
+    }
+
+    nav {
+        padding-inline: $global-padding-inline;
     }
 }
 
@@ -43,21 +79,36 @@ ul {
 
     li {
         text-align: center;
-        width: 700px;
+        width: min(700px, 100%);
+        hyphens: manual;
+
+        a {
+            display: inline-block;
+            width: 100%;
+        }
 
         .link-decorator {
             height: 32px;
             width: 32px;
             border-left: 4px solid black;
             border-bottom: 4px solid black;
-            transition: width 0.5s;
         }
 
         &:hover {
             .link-decorator {
                 border-left: none;
-                width: 100%;
-                transition: width 0.5s;
+                animation: nav-link-hover 0.5s ease-in-out forwards;
+            }
+
+            @keyframes nav-link-hover {
+                from {
+                    width: 100%;
+                }
+
+                to {
+                    width: 50%;
+                    margin-inline-start: 50%;
+                }
             }
         }
     }
@@ -68,8 +119,8 @@ ul {
 }
 
 .contact {
-    min-height: 300px;
-    background: linear-gradient(7deg, black 59.5%, white 60% 100%);
+    min-height: 250px;
+    background: linear-gradient(5deg, black 59.5%, white 60% 100%);
     padding-block-start: 100px;
     padding-inline: $global-padding-inline;
     color: white;
@@ -85,7 +136,7 @@ ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-block: 0.5em;
+        margin-block-start: 0.5em;
 
         .social-media a+a {
             margin-inline-start: 1em;
@@ -98,6 +149,10 @@ ul {
             &:hover img {
                 transform: translateY(-12px);
             }
+        }
+
+        @media (max-width: 550px) {
+            flex-direction: column;
         }
     }
 }

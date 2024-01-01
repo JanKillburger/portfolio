@@ -1,3 +1,5 @@
+@import "assets/styles/variables";
+
 /* syne-regular - latin */
 @font-face {
   font-display: swap;
@@ -5,7 +7,7 @@
   font-family: 'Syne';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/syne-v22-latin-regular.woff2') format('woff2');
+  src: url('assets/fonts/syne-v22-latin-regular.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -16,7 +18,7 @@
   font-family: 'Syne';
   font-style: normal;
   font-weight: 700;
-  src: url('/assets/fonts/syne-v22-latin-700.woff2') format('woff2');
+  src: url('assets/fonts/syne-v22-latin-700.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -27,7 +29,7 @@
   font-family: 'Syne';
   font-style: normal;
   font-weight: 800;
-  src: url('/assets/fonts/syne-v22-latin-800.woff2') format('woff2');
+  src: url('assets/fonts/syne-v22-latin-800.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -38,7 +40,7 @@
   font-family: 'Overpass';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/overpass-v13-latin-regular.woff2') format('woff2');
+  src: url('assets/fonts/overpass-v13-latin-regular.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -49,7 +51,7 @@
   font-family: 'Overpass';
   font-style: normal;
   font-weight: 700;
-  src: url('/assets/fonts/overpass-v13-latin-700.woff2') format('woff2');
+  src: url('assets/fonts/overpass-v13-latin-700.woff2') format('woff2');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -73,7 +75,8 @@ a {
 
 body {
   font-family: 'Overpass', sans-serif;
-  max-inline-size: 1440px;
+  padding-block-start: $header-height;
+  max-inline-size: $max-inline-size;
   margin: 0 auto;
   min-height: 200vh;
 

@@ -1,4 +1,6 @@
+import { HtmlParser } from '@angular/compiler';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { concat } from 'rxjs';
 
 @Component({
   selector: 'app-menu',
@@ -8,6 +10,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class MenuComponent {
   bodyElement = document.querySelector('body');
   menuOpen = false;
+
   menuItems = [
     {
       text: "About me",
@@ -17,7 +20,7 @@ export class MenuComponent {
       text: "My skills",
       href: "#my-skills"
     }, {
-      text: "Portfolio",
+      text: "Port&shy;folio",
       href: "#portfolio"
     }
   ];
