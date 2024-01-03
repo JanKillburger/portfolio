@@ -1,8 +1,8 @@
   <header class="header">
     <img src="assets/img/logo.png" alt="Jan Killburger logo" />
-    <button class="menu-toggle" type="button" (click)="toggleMenu()"></button>
+    <button [ngStyle]="{'background-image': currentBurgerIcn}" class="menu-toggle" type="button" (click)="toggleMenu()"></button>
   </header>
-  <div class="menu-wrapper" [class.is-open]="menuOpen" [class.is-closed]="!menuOpen">
+  <div class="menu-wrapper" *ngIf="isShown" [class.is-open]="menuOpen" [class.is-closed]="!menuOpen">
     <!-- <div class="spacer" [class.collapsed]="menuOpen" [class.expanded]="!menuOpen"></div> -->
     <nav>
       <ul>
