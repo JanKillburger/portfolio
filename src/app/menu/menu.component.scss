@@ -3,7 +3,7 @@
 :host {
     position: fixed;
     top: 0;
-    width: min(100vw, $max-inline-size);
+    width: min(100%, $max-inline-size);
     background-color: white;
 }
 
@@ -30,7 +30,7 @@
     flex-direction: column;
     position: fixed;
     height: calc(100vh - $header-height);
-    width: min(100vw, $max-inline-size);
+    width: min(100%, $max-inline-size);
     background-color: white;
     overflow: auto;
 

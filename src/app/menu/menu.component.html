@@ -3,7 +3,6 @@
     <button [ngStyle]="{'background-image': currentBurgerIcn}" class="menu-toggle" type="button" (click)="toggleMenu()"></button>
   </header>
   <div class="menu-wrapper" *ngIf="isShown" [class.is-open]="menuOpen" [class.is-closed]="!menuOpen">
-    <!-- <div class="spacer" [class.collapsed]="menuOpen" [class.expanded]="!menuOpen"></div> -->
     <nav>
       <ul>
         <li *ngFor="let item of menuItems" class="header-link">

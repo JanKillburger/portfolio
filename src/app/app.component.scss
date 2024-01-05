@@ -7,13 +7,3 @@
 .top-level-element {
     padding-inline: $global-padding-inline;
 }
-
-h1 {
-    hyphens: none;
-}
-
-@media (max-width: 550px) {
-    h1 {
-        hyphens: manual;
-    }
-}

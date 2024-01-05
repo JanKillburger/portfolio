@@ -1,0 +1,63 @@
+@import "../../assets/styles/variables";
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - $header-height);
+}
+
+h1 {
+    hyphens: none;
+    margin-block: 0;
+}
+
+@media (max-width: 550px) {
+    h1 {
+        hyphens: manual;
+    }
+}
+
+.title-wrapper {
+    margin-block: auto;
+}
+
+.name-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .horizontal-bar {
+        flex-grow: 1;
+        max-width: 35vw;
+        height: 3px;
+        background-color: black;
+    }
+
+    .name {
+        font-size: clamp(1rem, 3vw, 2.087rem);
+        color: $accent-color;
+        font-weight: 700;
+        padding-inline-start: 0.5em;
+    }
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    .email {
+        padding-inline-start: 0.3em;
+        background-color: white;
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        display: inline-block;
+        transform-origin: 0 0;
+        transform: rotate(-90deg);
+    }
+
+    .scroll-advice {
+        margin-inline-start: auto;
+    }
+}
