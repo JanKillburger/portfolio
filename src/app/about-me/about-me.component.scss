@@ -1,0 +1,46 @@
+$max-img-width: 500px;
+
+:host {
+    display: block;
+}
+
+.wrapper {
+    display: flex;
+    align-items: start;
+    gap: 1em;
+    flex-wrap: wrap;
+
+    .description {
+        width: 50%;
+        flex: auto;
+
+        p:first-child {
+            margin-block-start: 0;
+        }
+    }
+
+    .img-wrapper {
+        position: relative;
+        width: 50%;
+        max-width: $max-img-width;
+        flex: auto;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .img-frame {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 5%;
+            left: 5%;
+
+            &:hover {
+                border: 3px solid black;
+            }
+        }
+    }
+}
