@@ -20,6 +20,11 @@ h1 {
 
 .title-wrapper {
     margin-block: auto;
+
+    @media (max-width: 550px) {
+        margin-block-start: 1em;
+        margin-block-end: auto;
+    }
 }
 
 .name-wrapper {
