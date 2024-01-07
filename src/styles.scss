@@ -111,3 +111,38 @@ h2,
 h3 {
   font-size: clamp(1rem, 2vw, 2.087rem);
 }
+
+.btn {
+  font: inherit;
+  background-color: transparent;
+  border: 4px solid black;
+  padding: 1em 3em;
+  cursor: pointer;
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+  transition: all 0.15s;
+
+  &:hover {
+    padding-inline: 5em;
+    font-weight: 700;
+    transition: all 0.15s;
+  }
+
+  &:active {
+    background-color: black;
+    color: white
+  }
+
+  &.secondary {
+    color: white;
+    border-color: white;
+    background-color: black;
+
+    &:active {
+      background-color: white;
+      color: black
+    }
+  }
+}
