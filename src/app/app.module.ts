@@ -9,6 +9,7 @@ import { TitleSectionComponent } from './title-section/title-section.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { AnimatedArrowComponent } from './animated-arrow/animated-arrow.component';
 import { CommonModule } from '@angular/common';
+import { MySkillsComponent } from './my-skills/my-skills.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CommonModule } from '@angular/common';
     MenuComponent,
     TitleSectionComponent,
     AboutMeComponent,
-    AnimatedArrowComponent
+    AnimatedArrowComponent,
+    MySkillsComponent
   ],
   imports: [
     BrowserModule,

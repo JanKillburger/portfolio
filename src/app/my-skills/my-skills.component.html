@@ -1,0 +1,9 @@
+<section class="main">
+  <h2 id="my-skills">My skills</h2>
+  <ul>
+    <li *ngFor="let item of mySkills" class="icn-wrapper">
+      <img [src]="item.imgPath" [alt]="item.title" />
+      <span class="skill-name">{{ item.title }}</span>
+    </li>
+  </ul>
+</section>
