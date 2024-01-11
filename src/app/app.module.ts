@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { TitleSectionComponent } from './title-section/title-section.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { AnimatedArrowComponent } from './animated-arrow/animated-arrow.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AnimatedArrowComponent } from './animated-arrow/animated-arrow.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

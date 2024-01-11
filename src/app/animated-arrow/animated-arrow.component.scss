@@ -1,79 +1,78 @@
 @import "../../assets/styles/variables";
 
-$initial-base-size: 150px;
-$enlargement-increment: 100px;
+$initial-base-size: clamp(50px, 16.7vh, 150px);
+$enlargement-increment: clamp(33px, 11.1vh, 100px);
+$arrow-head-size: clamp(25px, 8.33vh, 75px);
+$margin-top: 1em;
 
 :host {
     display: block;
     position: relative;
     height: calc($initial-base-size + $enlargement-increment + 2em);
-    padding-inline: $global-padding-inline;
-    padding-block: 0.5em 1.5em;
 }
 
 .main.to-bottom-right {
     height: $initial-base-size;
     width: $initial-base-size;
     position: absolute;
-    top: 0;
+    top: $margin-top;
     left: $global-padding-inline;
-    border: 1px dashed red;
 }
 
 .main.to-bottom-left {
     height: $initial-base-size;
     width: $initial-base-size;
     position: absolute;
-    top: 0;
+    top: $margin-top;
     right: $global-padding-inline;
     border: 1px dashed red;
 }
 
-.to-bottom-right {
-    &:hover {
-        animation: move-arrow-to-bottom-right 0.75s ease-in-out forwards;
-    }
+.run-animation.to-bottom-right {
+    animation: move-arrow-to-bottom-right 0.75s ease-in-out forwards;
 
     @keyframes move-arrow-to-bottom-right {
         0% {
-            top: 0;
+            top: $margin-top;
             left: $global-padding-inline;
             width: $initial-base-size;
             height: $initial-base-size;
         }
+
         50% {
-            top: 0px;
+            top: $margin-top;
             left: $global-padding-inline;
-            width: $initial-base-size + $enlargement-increment;
-            height: $initial-base-size + $enlargement-increment;
+            width: calc($initial-base-size + $enlargement-increment);
+            height: calc($initial-base-size + $enlargement-increment);
         }
+
         100% {
-            top: $enlargement-increment;
+            top: calc($margin-top + $enlargement-increment);
             left: calc($enlargement-increment + $global-padding-inline);
         }
     }
 }
 
-.to-bottom-left {
-    &:hover {
-        animation: move-arrow-to-bottom-left 0.75s ease-in-out forwards;
-    }
+.run-animation.to-bottom-left {
+    animation: move-arrow-to-bottom-left 0.75s ease-in-out forwards;
 
     @keyframes move-arrow-to-bottom-left {
         0% {
-            top: 0px;
+            top: $margin-top;
             right: $global-padding-inline;
             width: $initial-base-size;
             height: $initial-base-size;
         }
+
         50% {
-            top: 0px;
+            top: $margin-top;
             right: $global-padding-inline;
-            width: $initial-base-size + $enlargement-increment;
-            height: $initial-base-size + $enlargement-increment;
+            width: calc($initial-base-size + $enlargement-increment);
+            height: calc($initial-base-size + $enlargement-increment);
         }
+
         100% {
-            top: $enlargement-increment;
+            top: calc($margin-top + $enlargement-increment);
             right: calc($enlargement-increment + $global-padding-inline);
         }
     }
@@ -81,8 +80,8 @@ $enlargement-increment: 100px;
 
 .to-bottom-right .diagonal-line {
     position: absolute;
-    top: -2px;
-    left: 1px;
+    top: -4px;
+    left: -1px;
     width: 141.421%;
     transform-origin: 0 0;
     transform: rotate(45deg);
@@ -92,8 +91,8 @@ $enlargement-increment: 100px;
 
 .to-bottom-left .diagonal-line {
     position: absolute;
-    top: -2px;
-    right: 1px;
+    top: -4px;
+    right: -1px;
     width: 141.421%;
     transform-origin: 100% 0;
     transform: rotate(-45deg);
@@ -102,8 +101,8 @@ $enlargement-increment: 100px;
 }
 
 .to-bottom-right .arrow-head {
-    width: 50px;
-    height: 50px;
+    width: $arrow-head-size;
+    height: $arrow-head-size;
     border-right: 4px solid black;
     border-bottom: 4px solid black;
     position: absolute;
@@ -112,8 +111,8 @@ $enlargement-increment: 100px;
 }
 
 .to-bottom-left .arrow-head {
-    width: 50px;
-    height: 50px;
+    width: $arrow-head-size;
+    height: $arrow-head-size;
     border-left: 4px solid black;
     border-bottom: 4px solid black;
     position: absolute;

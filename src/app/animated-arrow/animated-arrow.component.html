@@ -1,4 +1,10 @@
-<div class="main" [class.to-bottom-right]="orientation==='to-bottom-right'" [class.to-bottom-left]="orientation==='to-bottom-left'">
-    <div class="diagonal-line"></div>
-    <div class="arrow-head"></div>
+<div
+  #main
+  class="main"
+  [class.to-bottom-right]="orientation === 'to-bottom-right'"
+  [class.to-bottom-left]="orientation === 'to-bottom-left'"
+  [class.run-animation]="animationIsStarted"
+>
+  <div class="diagonal-line"></div>
+  <div class="arrow-head"></div>
 </div>
