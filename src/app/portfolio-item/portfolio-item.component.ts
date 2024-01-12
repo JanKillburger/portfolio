@@ -1,12 +1,11 @@
-import { Component, Input, ElementRef, HostListener } from '@angular/core';
+import { Component, Input, ElementRef, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio-item',
   templateUrl: './portfolio-item.component.html',
   styleUrl: './portfolio-item.component.scss'
 })
-export class PortfolioItemComponent {
-  constructor(private elRef: ElementRef) {}
+export class PortfolioItemComponent implements OnInit{
   @Input() index!: number;
   @Input() totalNumber!: number;
   @Input() project!: {
@@ -15,8 +14,16 @@ export class PortfolioItemComponent {
     desc: string,
     imgPath: string,
     link: string
-  }
+  };
+  seqNo!: string;
   animationIsStarted = false;
+
+  constructor(private elRef: ElementRef) {}
+  
+  ngOnInit(): void {
+    this.seqNo = (this.index + 1).toString().padStart(2,"0") + "/" + this.totalNumber.toString().padStart(2,"0");
+  }
+
   @HostListener('document:scroll', ['$event'])
   public onViewportScroll() {
     const windowHeight = window.innerHeight;
