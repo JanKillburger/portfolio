@@ -1,0 +1,22 @@
+<h3>0{{ index + 1 }}/0{{ totalNumber }}</h3>
+<div class="project-wrapper">
+  <div class="img-wrapper">
+    <img
+      [src]="project.imgPath"
+      alt="{{ project.title }} application screenshot"
+    />
+    <div class="img-frame">
+      <img
+        class="img-frame-arrow"
+        src="assets/img/project-arrow.svg"
+        alt="Decoration arrow"
+      />
+    </div>
+  </div>
+  <div class="description">
+    <p class="heading">{{ project.title }}</p>
+    <p class="skills">{{ project.skills.join(" | ") }}</p>
+    <p>{{ project.desc }}</p>
+    <a href="#" class="btn">Test</a>
+  </div>
+</div>

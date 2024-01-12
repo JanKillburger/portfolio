@@ -91,7 +91,8 @@ h3,
 h4,
 h5,
 h6,
-.header-link {
+.header-link,
+.heading {
   font-family: 'Syne';
   font-weight: 700;
 }
@@ -103,8 +104,9 @@ h1 {
 }
 
 h2,
-.header-link {
-  font-size: clamp(1.9565rem, 4vw, 3.3913rem);
+.header-link,
+.heading {
+  font-size: clamp(1.7rem, 4vw, 3.3913rem);
   font-weight: 800;
 }
 

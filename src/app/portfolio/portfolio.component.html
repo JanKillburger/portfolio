@@ -1,0 +1,16 @@
+<h2 id="portfolio">Port&shy;folio</h2>
+<p>This page is a sample of my work - please feel free to try them out.</p>
+<div class="portfolio-list">
+  <app-portfolio-item
+    *ngFor="
+      let project of myProjects;
+      let i = index;
+      let even = even;
+      let odd = odd
+    "
+    [project]="project"
+    [index]="i"
+    [totalNumber]="myProjects.length"
+    [ngClass]="{ odd: odd, even: even }"
+  ></app-portfolio-item>
+</div>

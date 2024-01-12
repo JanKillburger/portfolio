@@ -8,7 +8,7 @@
     position: relative;
     border: 4px solid black;
     padding: 4vh 4vw;
-    margin-block-start: 0.5em;
+    margin-block-start: 2em;
 }
 
 h2 {
@@ -18,7 +18,7 @@ h2 {
     left: 50%;
     transform: translate(-50%, calc(-50% - 2px));
     margin: 0;
-    padding-inline: 0.5em;
+    padding-inline: 0.3em;
     background-color: white;
 }
 
@@ -27,8 +27,8 @@ ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    column-gap: 6em;
-    row-gap: 2em;
+    column-gap: 6vw;
+    row-gap: 2vw;
 }
 
 .icn-wrapper {

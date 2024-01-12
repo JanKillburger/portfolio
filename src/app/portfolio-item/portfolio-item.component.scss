@@ -1,0 +1,134 @@
+@import "../../assets/styles/variables";
+
+.project-wrapper {
+    display: flex;
+    align-items: start;
+    gap: 6vw;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        gap: 2vh
+    }
+}
+
+.img-wrapper {
+    position: relative;
+    width: 60%;
+    max-width: 600px;
+    flex: auto;
+
+    @media (max-width: 1000px) {
+        width: 95%;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: saturate(0);
+    }
+
+    .img-frame {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 5%;
+        left: 5%;
+    }
+
+    .img-frame-arrow {
+        visibility: hidden;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        width: 5vw;
+        max-width: 56px;
+        height: auto;
+        transform: translate(calc(1.5px - 50%), -50%) rotate(135deg) scale(0.8);
+    }
+}
+
+.description {
+    width: 40%;
+    transform: translateX(-100%);
+    flex: auto;
+    opacity: 0;
+
+    .skills {
+        color: $accent-color;
+    }
+
+    .heading {
+        margin-block: 0.3em 0.5em;
+    }
+
+    @media (max-width: 1000px) {
+        width: 100%;
+        transform: translateY(max(-100%, -25vh));
+    }
+}
+
+:host.even {
+    h3 {
+        text-align: end;
+    }
+}
+
+:host.odd {
+
+    @media (min-width: 1001px) {
+        .img-wrapper {
+            order: 2;
+        }
+
+        .description {
+            transform: translateX(200%);
+        }
+    }
+
+    .img-wrapper {
+        align-self: flex-end;
+    }    
+
+    .img-frame {
+        left: revert;
+        right: 5%;
+    }
+
+    .img-frame-arrow {
+        left: revert;
+        transform: translate(calc(-50% - 1.5px), -50%) rotate(135deg) scale(0.8);
+    }
+}
+
+:host.is-active {
+    .description {
+        opacity: 1;
+        transform: translate(0, 0);
+        transition: all 0.5s ease-in-out 0.5s;
+    }
+
+    img {
+        filter: saturate(1);
+        transition: all 0.5s;
+    }
+
+    .img-frame {
+        border: 3px solid black;
+
+        .img-frame-arrow {
+            visibility: visible;
+            transition: transform 0.5s ease-in-out 0.5s;
+        }
+    }
+}
+
+:host.is-active.even {
+    .img-frame-arrow {
+        transform: translate(calc(1.5px - 50%), -50%) rotate(0deg) scale(1);}
+}
+
+:host.is-active.odd {
+    .img-frame-arrow {
+        transform: translate(calc(-50% - 1.5px), -50%) rotate(0deg) scale(1);}
+}

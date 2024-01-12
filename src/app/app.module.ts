@@ -10,6 +10,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { AnimatedArrowComponent } from './animated-arrow/animated-arrow.component';
 import { CommonModule } from '@angular/common';
 import { MySkillsComponent } from './my-skills/my-skills.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { PortfolioItemComponent } from './portfolio-item/portfolio-item.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
     TitleSectionComponent,
     AboutMeComponent,
     AnimatedArrowComponent,
-    MySkillsComponent
+    MySkillsComponent,
+    PortfolioComponent,
+    PortfolioItemComponent
   ],
   imports: [
     BrowserModule,
