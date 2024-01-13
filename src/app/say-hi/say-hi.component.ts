@@ -9,6 +9,7 @@ export class SayHiComponent {
   userName = '';
   userEmail = '';
   userMessage = '';
+  privacyPolicy = false;
   nameHasFocus = false;
   emailHasFocus = false;
   messageHasFocus = false;

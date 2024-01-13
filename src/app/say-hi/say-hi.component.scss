@@ -88,6 +88,13 @@ textarea {
     }
 }
 
+input[type=checkbox] {
+    width: 1em;
+    height: 1em;
+    margin-inline-end: 0.7em;
+    accent-color: $accent-color;
+}
+
 textarea {
     min-height: 300px;
 }
@@ -99,4 +106,8 @@ textarea {
 .contact-diagonal {
     background: linear-gradient(to left bottom, white 49%, black 50%);
     height: 50px;
+}
+
+button {
+    font-size: 1rem;
 }

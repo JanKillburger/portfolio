@@ -156,3 +156,28 @@ h3 {
     }
   }
 }
+
+.btn:disabled {
+  color: gray;
+  border-color: gray;
+  cursor: default;
+}
+
+.btn:disabled:hover {
+  padding-inline: 3em;
+  font-weight: normal;
+}
+
+.btn:disabled.secondary:active {
+    color: gray;
+    border-color: gray;
+    background-color: black;
+}
+
+.text-link {
+  color: $accent-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

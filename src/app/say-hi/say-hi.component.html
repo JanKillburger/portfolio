@@ -107,6 +107,23 @@
           <p>Bitte Nachricht mit mind. 40 Zeichen eingeben.</p>
         </div>
       </div>
+      <p>
+        <input
+          type="checkbox"
+          name="privacy-policy-cb"
+          #privacyPolicyCb="ngModel"
+          id="privacy-policy-cb"
+          [(ngModel)]="privacyPolicy"
+        />I've read the <a href="#top" class="text-link">privacy policy</a> and
+        agree to the processing of my data as outlined.
+      </p>
+      <button
+        type="button"
+        class="btn secondary"
+        [disabled]="!(contactForm.valid && privacyPolicyCb.value)"
+      >
+        Send message
+      </button>
     </form>
   </div>
 </div>
