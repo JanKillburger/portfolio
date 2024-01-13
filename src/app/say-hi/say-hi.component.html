@@ -1,101 +1,112 @@
-<h2 id="say-hi" class="scroll-target">Say Hi!</h2>
-<div class="form-wrapper">
-  <p class="highlighted">Want to discuss a new project?</p>
-  <p>Say hello! Let's discuss your ideas and make it happen</p>
-  <form (ngSubmit)="sendMail()" #contactForm="ngForm">
-    <div class="form-group">
-      <img
-        src="assets/img/form-error.svg"
-        alt="Error"
-        class="validation-indicator error"
-        [class.is-active]="name.invalid && name.dirty"
-      />
-      <img
-        src="assets/img/form-success.svg"
-        alt="Success"
-        class="validation-indicator success"
-        [class.is-active]="name.valid"
-      />
-      <label [class.small-label]="nameHasFocus || name.value" for="name"
-        >Your name</label
-      >
-      <input
-        (focus)="toggleFocus($event)"
-        (blur)="toggleFocus($event)"
-        type="text"
-        name="name"
-        id="name"
-        #name="ngModel"
-        [(ngModel)]="userName"
-        required
-      />
-      <div [hidden]="name.valid || name.pristine" class="alert alert-error">
-        <p>Bitte Namen eingeben.</p>
+<div class="contact-diagonal top-level-element"></div>
+<div class="main top-level-element">
+  <h2 id="say-hi" class="scroll-target">Say Hi!</h2>
+  <div class="form-wrapper">
+    <p class="highlighted">Want to discuss a new project?</p>
+    <p>Say hello! Let's discuss your ideas and make it happen</p>
+    <form (ngSubmit)="sendMail()" #contactForm="ngForm">
+      <div class="form-group">
+        <div class="form-subgroub">
+          <img
+            src="assets/img/form-error.svg"
+            alt="Error"
+            class="validation-indicator error"
+            [class.is-active]="name.invalid && name.dirty"
+          />
+          <img
+            src="assets/img/form-success.svg"
+            alt="Success"
+            class="validation-indicator success"
+            [class.is-active]="name.valid"
+          />
+          <label [class.small-label]="nameHasFocus || name.value" for="name"
+            >Your name</label
+          >
+          <input
+            (focus)="toggleFocus($event)"
+            (blur)="toggleFocus($event)"
+            type="text"
+            name="name"
+            id="name"
+            #name="ngModel"
+            [(ngModel)]="userName"
+            required
+          />
+        </div>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-error">
+          <p>Bitte Namen eingeben.</p>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <img
-        src="assets/img/form-error.svg"
-        alt="Error"
-        class="validation-indicator error"
-        [class.is-active]="email.invalid && email.dirty"
-      />
-      <img
-        src="assets/img/form-success.svg"
-        alt="Success"
-        class="validation-indicator success"
-        [class.is-active]="email.valid"
-      />
-      <label [class.small-label]="emailHasFocus || email.value" for="email"
-        >Your email</label
-      >
-      <input
-        (focus)="toggleFocus($event)"
-        (blur)="toggleFocus($event)"
-        type="text"
-        id="email"
-        name="email"
-        #email="ngModel"
-        [(ngModel)]="userEmail"
-        required
-      />
-      <div [hidden]="email.valid || email.pristine" class="alert alert-error">
-        <p>Bitte Email eingeben.</p>
+      <div class="form-group">
+        <div class="form-subgroub">
+          <img
+            src="assets/img/form-error.svg"
+            alt="Error"
+            class="validation-indicator error"
+            [class.is-active]="email.invalid && email.dirty"
+          />
+          <img
+            src="assets/img/form-success.svg"
+            alt="Success"
+            class="validation-indicator success"
+            [class.is-active]="email.valid"
+          />
+          <label [class.small-label]="emailHasFocus || email.value" for="email"
+            >Your email</label
+          >
+          <input
+            (focus)="toggleFocus($event)"
+            (blur)="toggleFocus($event)"
+            type="email"
+            email="true"
+            id="email"
+            name="email"
+            #email="ngModel"
+            [(ngModel)]="userEmail"
+            required
+          />
+        </div>
+        <div [hidden]="email.valid || email.pristine" class="alert alert-error">
+          <p>Bitte Email eingeben.</p>
+        </div>
       </div>
-    </div>
-    <div class="form-group">
-      <img
-        src="assets/img/form-error.svg"
-        alt="Error"
-        class="validation-indicator error"
-        [class.is-active]="message.invalid && message.dirty"
-      />
-      <img
-        src="assets/img/form-success.svg"
-        alt="Success"
-        class="validation-indicator success"
-        [class.is-active]="message.valid"
-      />
-      <label
-        [class.small-label]="messageHasFocus || message.value"
-        for="message"
-        >Your message</label
-      >
-      <textarea
-        (focus)="toggleFocus($event)"
-        (blur)="toggleFocus($event)"
-        name="message"
-        [(ngModel)]="userMessage"
-        id="message"
-        #message="ngModel"
-        required
-      ></textarea>
-      <div
-        [hidden]="message.valid || message.pristine"
-        class="alert alert-error"
-      >
-        <p>Bitte Nachricht eingeben.</p>
+      <div class="form-group">
+        <div class="form-subgroub">
+          <img
+            src="assets/img/form-error.svg"
+            alt="Error"
+            class="validation-indicator error"
+            [class.is-active]="message.invalid && message.dirty"
+          />
+          <img
+            src="assets/img/form-success.svg"
+            alt="Success"
+            class="validation-indicator success"
+            [class.is-active]="message.valid"
+          />
+          <label
+            [class.small-label]="messageHasFocus || message.value"
+            for="message"
+            >Your message</label
+          >
+          <textarea
+            (focus)="toggleFocus($event)"
+            (blur)="toggleFocus($event)"
+            name="message"
+            [(ngModel)]="userMessage"
+            id="message"
+            #message="ngModel"
+            required
+            [minlength]="40"
+          ></textarea>
+        </div>
+        <div
+          [hidden]="message.valid || message.pristine"
+          class="alert alert-error"
+        >
+          <p>Bitte Nachricht mit mind. 40 Zeichen eingeben.</p>
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>
