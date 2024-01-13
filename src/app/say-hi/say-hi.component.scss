@@ -1,0 +1,85 @@
+@import "../../assets/styles/variables";
+
+:host {
+    display: block;
+    background-color: black;
+    color: white;
+}
+
+.highlighted {
+    color: $accent-color;
+}
+
+.form-wrapper {
+    max-inline-size: 600px;
+    margin: 0 auto;
+
+    & > p {
+        text-align: center;
+    }
+}
+
+form {
+    
+    font-size: 0.7rem;
+}
+
+.form-group {
+    position: relative;
+
+    &+.form-group {
+        margin-block-start: 1em;
+    }
+}
+
+.validation-indicator {
+    position: absolute;
+    right: 1em;
+    transform-origin: 0 0;
+    transform: translateY(calc(1.05rem - 50%));
+    display: none;
+
+    &.is-active {
+        display: revert;
+    }
+}
+
+
+label {
+    position: absolute;
+    padding-block-start: calc(1em + 2px);
+    padding-inline-start: 1em;
+}
+
+.small-label {
+    transform: translate(15%, -40%);
+    background-color: black;
+    padding-inline: 0.1em;
+    padding-block: 0;
+}
+
+input,
+textarea {
+    font: inherit;
+    color: white;
+    background-color: inherit;
+    padding: 1em 1.5em;
+    border: 2px solid transparent;
+    border-bottom-color: white;
+    outline: none;
+    width: 100%;
+
+    &:hover,
+    &:focus,
+    &.ng-dirty {
+        border-color: white;
+    }
+}
+
+textarea {
+    min-height: 300px;
+}
+
+.alert-error {
+    color: #E61C40;
+}

@@ -114,6 +114,14 @@ h3 {
   font-size: clamp(1rem, 2vw, 2.087rem);
 }
 
+.scroll-target {
+    scroll-margin-block-start: $header-height;
+}
+
+.top-level-element {
+    padding-inline: $global-padding-inline;
+}
+
 .btn {
   font: inherit;
   background-color: transparent;

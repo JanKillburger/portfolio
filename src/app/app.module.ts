@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PortfolioItemComponent } from './portfolio-item/portfolio-item.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SayHiComponent } from './say-hi/say-hi.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,16 @@ import { PortfolioItemComponent } from './portfolio-item/portfolio-item.componen
     AnimatedArrowComponent,
     MySkillsComponent,
     PortfolioComponent,
-    PortfolioItemComponent
+    PortfolioItemComponent,
+    SayHiComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
