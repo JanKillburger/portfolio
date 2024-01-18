@@ -31,6 +31,7 @@
             #name="ngModel"
             [(ngModel)]="userName"
             required
+            [disabled]="formSubmitted"
           />
         </div>
         <div [hidden]="name.valid || name.pristine" class="alert alert-error">
@@ -64,6 +65,7 @@
             #email="ngModel"
             [(ngModel)]="userEmail"
             required
+            [disabled]="formSubmitted"
           />
         </div>
         <div [hidden]="email.valid || email.pristine" class="alert alert-error">
@@ -97,14 +99,14 @@
             id="message"
             #message="ngModel"
             required
-            [minlength]="40"
+            [disabled]="formSubmitted"
           ></textarea>
         </div>
         <div
           [hidden]="message.valid || message.pristine"
           class="alert alert-error"
         >
-          <p>Bitte Nachricht mit mind. 40 Zeichen eingeben.</p>
+          <p>Bitte Nachricht eingeben.</p>
         </div>
       </div>
       <p>
@@ -114,16 +116,25 @@
           #privacyPolicyCb="ngModel"
           id="privacy-policy-cb"
           [(ngModel)]="privacyPolicy"
-        />I've read the <a href="#top" class="text-link">privacy policy</a> and
-        agree to the processing of my data as outlined.
+          [disabled]="formSubmitted"
+        />I've read the
+        <a routerLink="legal-notice" fragment="data-privacy" class="text-link"
+          >privacy policy</a
+        >
+        and agree to the processing of my data as outlined.
       </p>
       <button
-        type="button"
+        type="submit"
         class="btn secondary"
-        [disabled]="!(contactForm.valid && privacyPolicyCb.value)"
+        [disabled]="
+          !(contactForm.valid && privacyPolicyCb.value && !formSubmitted)
+        "
       >
         Send message
       </button>
+      <div class="status-wrapper" *ngIf="statusMessage">
+        <p>{{ statusMessage }}</p>
+      </div>
     </form>
   </div>
 </div>

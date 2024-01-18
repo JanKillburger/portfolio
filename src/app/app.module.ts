@@ -14,6 +14,9 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PortfolioItemComponent } from './portfolio-item/portfolio-item.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SayHiComponent } from './say-hi/say-hi.component';
+import { FooterComponent } from './footer/footer.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { SayHiComponent } from './say-hi/say-hi.component';
     MySkillsComponent,
     PortfolioComponent,
     PortfolioItemComponent,
-    SayHiComponent
+    SayHiComponent,
+    FooterComponent,
+    ImprintComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

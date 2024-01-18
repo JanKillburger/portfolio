@@ -45,10 +45,12 @@ ul {
     img {
         position: relative;
         left: 0;
+        height: 70px;
         width: 70px;
-        height: auto;
+        object-fit: contain;
 
         @media (max-width: 600px) {
+            height: 50px;
             width: 50px;
         }
     }

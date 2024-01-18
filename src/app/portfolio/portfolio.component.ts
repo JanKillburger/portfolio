@@ -8,18 +8,18 @@ import { Component } from '@angular/core';
 export class PortfolioComponent {
 myProjects = [
   {
-    title: "Join",
-    skills: ["Angular","TypeScript","HTML","CSS","Firebase"],
-    desc: "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories",
-    imgPath: "assets/img/portfolio-join.png",
-    link: "www.google.com"
+    title: "El Pollo Loco",
+    skills: ["JavaScript","HTML","CSS"],
+    desc: "Simple Jump and Run game as an introduction to object-oriented programming based on HTML canvas and images.",
+    imgPath: "assets/img/portfolio-pollo-loco.png",
+    link: "https://el-pollo-loco.jan-killburger.de"
   },
   {
     title: "Join",
-    skills: ["Angular","TypeScript","HTML","CSS","Firebase"],
+    skills: ["JavaScript","HTML","CSS", "Git"],
     desc: "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories",
     imgPath: "assets/img/portfolio-join.png",
-    link: "www.google.com"
+    link: "https://join.jan-killburger.de"
   }
 ]
 }

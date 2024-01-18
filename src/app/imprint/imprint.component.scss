@@ -1,0 +1,12 @@
+@import "../../assets/styles/variables";
+
+:host {
+    display: block;
+    padding-inline: $global-padding-inline;
+
+    font-size: 0.7rem;
+    h1, h2, h3 {
+        font-size: revert;
+        hyphens: manual;
+    }
+}

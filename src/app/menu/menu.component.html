@@ -1,12 +1,12 @@
   <header class="header">
-    <img src="assets/img/logo.png" alt="Jan Killburger logo" />
+    <a routerLink="" class="logo black">&lt;jk /&gt;</a>
     <button [ngStyle]="{'background-image': currentBurgerIcn}" class="menu-toggle" type="button" (click)="toggleMenu()"></button>
   </header>
   <div class="menu-wrapper" *ngIf="isShown" [class.is-open]="menuOpen" [class.is-closed]="!menuOpen">
     <nav>
       <ul>
         <li *ngFor="let item of menuItems" class="header-link">
-          <a [href]="item.href" (click)="toggleMenu()">
+          <a routerLink="" [fragment]="item.href" (click)="toggleMenu()">
             <span [innerHTML]="item.text"></span>
             <div class="link-decorator"></div>
           </a>
@@ -15,17 +15,17 @@
     </nav>
     <div class="contact-diagonal"></div>
     <div class="contact">
-      <a href="#say-hi" class="header-link header-link-dark" (click)="toggleMenu()">Say Hi!</a>
+      <a routerLink="" fragment="say-hi" class="header-link header-link-dark" (click)="toggleMenu()">Say Hi!</a>
       <div class="contact-footer">
-        <a href="#say-hi" (click)="toggleMenu()">jkillburger&#64;gmail.com</a>
+        <a routerLink="" fragment="say-hi" (click)="toggleMenu()">jkillburger&#64;gmail.com</a>
         <div class="social-media">
-          <a href="#">
+          <a href="https://github.com/JanKillburger" target="_blank">
             <img src="assets/img/github-button.png" alt="Go to Github">
           </a>
-          <a href="#say-hi" (click)="toggleMenu()">
+          <a routerLink="" fragment="say-hi" (click)="toggleMenu()">
             <img src="assets/img/email-button.png" alt="Contact me">
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/jan-killburger-4b3809134/" target="_blank">
             <img src="assets/img/linkedin-button.png" alt="Go to LinkedIn">
           </a>
         </div>

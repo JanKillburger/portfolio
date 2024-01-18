@@ -1,0 +1,36 @@
+:host > * {
+    background-color: black;
+    color: white;
+    font-size: 0.7rem;
+}
+
+.links,
+.copyright-legal-notice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block-end: 1rem;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    
+    & > :not(:first-child) {
+        margin-inline-start: 1em;
+    }
+
+    a {
+        height: 64px;
+        display: flex;
+        align-items: center;
+
+        &:hover > img {
+            transform: translateY(-11px);
+        }
+    }
+}

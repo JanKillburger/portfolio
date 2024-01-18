@@ -17,6 +17,6 @@
     <p class="heading">{{ project.title }}</p>
     <p class="skills">{{ project.skills.join(" | ") }}</p>
     <p>{{ project.desc }}</p>
-    <a href="#" class="btn" >Test</a>
+    <a [href]="project.link" target="_blank" class="btn" >Test</a>
   </div>
 </div>
