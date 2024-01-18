@@ -12,14 +12,16 @@ myProjects = [
     skills: ["JavaScript","HTML","CSS"],
     desc: "Simple Jump and Run game as an introduction to object-oriented programming based on HTML canvas and images.",
     imgPath: "assets/img/portfolio-pollo-loco.png",
-    link: "https://el-pollo-loco.jan-killburger.de"
+    appLink: "https://el-pollo-loco.jan-killburger.de",
+    repLink: "https://github.com/JanKillburger/pollo-loco"
   },
   {
     title: "Join",
     skills: ["JavaScript","HTML","CSS", "Git"],
     desc: "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories",
     imgPath: "assets/img/portfolio-join.png",
-    link: "https://join.jan-killburger.de"
+    appLink: "https://join.jan-killburger.de",
+    repLink: "https://github.com/JanKillburger/join"
   }
 ]
 }

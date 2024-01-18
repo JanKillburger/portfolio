@@ -134,6 +134,10 @@ h3 {
   text-align: center;
   transition: all 0.15s;
 
+  & + .btn {
+    margin-block-start: 1em;
+  }
+
   &:hover {
     padding-inline: 5em;
     font-weight: 700;

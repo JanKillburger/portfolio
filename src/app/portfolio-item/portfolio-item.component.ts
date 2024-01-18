@@ -13,7 +13,8 @@ export class PortfolioItemComponent implements OnInit{
     skills: string[],
     desc: string,
     imgPath: string,
-    link: string
+    appLink: string
+    repLink: string
   };
   seqNo!: string;
   animationIsStarted = false;
