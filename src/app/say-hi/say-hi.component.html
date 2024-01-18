@@ -121,7 +121,7 @@
         <a routerLink="legal-notice" fragment="data-privacy" class="text-link"
           >privacy policy</a
         >
-        and agree to the processing of my data as outlined. This is required for sending a message.
+        and agree to the processing of my data as outlined. <span [class.alert-error]="!privacyPolicyCb.value">This is required for sending a message.</span>
       </p>
       <button
         type="submit"
