@@ -60,6 +60,16 @@
   font-size: 1.4375em;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: gray white;
+}
+
+:root::-webkit-scrollbar {
+  width: 5px;
+}
+
+:root::-webkit-scrollbar-thumb {
+  background-color: gray;
 }
 
 *,
@@ -139,7 +149,7 @@ h3 {
   }
 
   &:hover {
-    padding-inline: 5em;
+    padding-inline: 4em;
     font-weight: 700;
     transition: all 0.15s;
   }
