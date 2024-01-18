@@ -32,6 +32,8 @@
     width: min(100%, $max-inline-size);
     background-color: white;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
 
     &.is-closed {
         animation: hide-menu 0.5s ease-in-out forwards;
@@ -67,6 +69,7 @@
 
     nav {
         padding-inline: $global-padding-inline;
+        flex: 1;
     }
 }
 
