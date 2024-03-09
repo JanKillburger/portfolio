@@ -108,7 +108,7 @@ h6,
 }
 
 h1 {
-  font-size: clamp(1.9565rem, 6vw, 5.5652rem);
+  font-size: clamp(1.5rem, 6vw, 5.5652rem);
   font-weight: 800;
   text-align: center;
 }
@@ -116,7 +116,7 @@ h1 {
 h2,
 .header-link,
 .heading {
-  font-size: clamp(1.7rem, 4vw, 3.3913rem);
+  font-size: clamp(1.2rem, 3vw, 3.3913rem);
   font-weight: 800;
 }
 
@@ -139,7 +139,8 @@ h3 {
   padding: 1em 3em;
   cursor: pointer;
   display: block;
-  width: max-content;
+  width: 100%;
+  max-width: max-content;
   margin: 0 auto;
   text-align: center;
   transition: all 0.15s;

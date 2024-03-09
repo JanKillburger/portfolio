@@ -22,7 +22,7 @@ $max-img-width: 500px;
     .img-wrapper {
         position: relative;
         width: 50%;
-        max-width: min($max-img-width, 95%);
+        max-width: min($max-img-width, 100%);
         flex: auto;
 
         img {
