@@ -49,6 +49,10 @@ ul {
         width: 70px;
         object-fit: contain;
 
+        &.backend-skill {
+            background-color: black;
+        }
+
         @media (max-width: 600px) {
             height: 50px;
             width: 50px;

@@ -43,5 +43,35 @@ export class MySkillsComponent {
     imgPath: "assets/img/icn-api.svg",
     title: "Rest-API"
   },
+  {
+    imgPath: "assets/img/icn-python.svg",
+    title: "Python",
+    isBackendSkill: true
+  },
+  {
+    imgPath: "assets/img/Django.svg",
+    title: "Django",
+    isBackendSkill: true
+  },{
+    imgPath: "assets/img/PostgreSQL.svg",
+    title: "PostgreSQL",
+    isBackendSkill: true
+  },{
+    imgPath: "assets/img/Linux.svg",
+    title: "Linux",
+    isBackendSkill: true
+  },{
+    imgPath: "assets/img/Cloud.svg",
+    title: "Google Cloud",
+    isBackendSkill: true
+  },{
+    imgPath: "assets/img/Docker.svg",
+    title: "Docker",
+    isBackendSkill: true
+  },{
+    imgPath: "assets/img/RxJs.svg",
+    title: "RxJs",
+    isBackendSkill: true
+  },
  ]
 }
