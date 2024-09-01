@@ -22,11 +22,11 @@ export class MenuComponent {
   ];
   menuItems = [
     {
-      text: "About me",
+      text: "Über mich",
       href: "about-me"
     },
     {
-      text: "My skills",
+      text: "Meine Kenntnisse",
       href: "my-skills"
     }, {
       text: "Port&shy;folio",
