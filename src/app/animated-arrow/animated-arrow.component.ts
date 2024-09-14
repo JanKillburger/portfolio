@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, ViewChild, HostListener } from '@angular/core';
+import { ObserverChildDirective } from '../observer-child.directive';
 
 @Component({
     selector: 'app-animated-arrow',
@@ -7,18 +8,5 @@ import { Component, ElementRef, Input, ViewChild, HostListener } from '@angular/
     standalone: true
 })
 export class AnimatedArrowComponent {
-  animationIsStarted = false;
   @Input() orientation?: "to-bottom-right" | "to-bottom-left";
-  @ViewChild('main') arrow!: ElementRef;
-  @HostListener('document:scroll', ['$event'])
-  public onViewportScroll() {
-    const windowHeight = window.innerHeight;
-    const boundingRectArrow = this.arrow.nativeElement.getBoundingClientRect();
-
-    if (boundingRectArrow.top >= 0 && boundingRectArrow.bottom <= (windowHeight - 150)) {
-      setTimeout(() => {
-        this.animationIsStarted = true;
-      }, 250);
-    }
-  }
 }

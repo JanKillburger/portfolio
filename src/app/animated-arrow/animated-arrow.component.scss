@@ -27,7 +27,7 @@ $margin-top: 1em;
     right: $global-padding-inline;
 }
 
-.run-animation.to-bottom-right {
+:host.run-animation .to-bottom-right {
     animation: move-arrow-to-bottom-right 0.75s ease-in-out forwards;
 
     @keyframes move-arrow-to-bottom-right {
@@ -52,7 +52,7 @@ $margin-top: 1em;
     }
 }
 
-.run-animation.to-bottom-left {
+:host.run-animation .to-bottom-left {
     animation: move-arrow-to-bottom-left 0.75s ease-in-out forwards;
 
     @keyframes move-arrow-to-bottom-left {

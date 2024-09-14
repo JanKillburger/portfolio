@@ -1,10 +1,10 @@
 <app-title-section class="top-level-element"></app-title-section>
 @defer {
 <app-about-me id="about-me" class="top-level-element scroll-target"></app-about-me>
-<app-animated-arrow [orientation]="'to-bottom-left'"></app-animated-arrow>
+<app-animated-arrow appObserverChild [observer]="io" [orientation]="'to-bottom-left'"></app-animated-arrow>
 <app-my-skills class="top-level-element"></app-my-skills>
-<app-animated-arrow [orientation]="'to-bottom-right'"></app-animated-arrow>
+<app-animated-arrow appObserverChild  [observer]="io" [orientation]="'to-bottom-right'"></app-animated-arrow>
 <app-portfolio class="top-level-element"></app-portfolio>
-<app-animated-arrow [orientation]="'to-bottom-left'"></app-animated-arrow>
+<app-animated-arrow appObserverChild  [observer]="io" [orientation]="'to-bottom-left'"></app-animated-arrow>
 <app-say-hi></app-say-hi>
 }
