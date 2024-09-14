@@ -1,9 +1,10 @@
 import { Component, ElementRef, Input, ViewChild, HostListener } from '@angular/core';
 
 @Component({
-  selector: 'app-animated-arrow',
-  templateUrl: './animated-arrow.component.html',
-  styleUrl: './animated-arrow.component.scss'
+    selector: 'app-animated-arrow',
+    templateUrl: './animated-arrow.component.html',
+    styleUrl: './animated-arrow.component.scss',
+    standalone: true
 })
 export class AnimatedArrowComponent {
   animationIsStarted = false;

@@ -2,6 +2,8 @@
 <p>Hier finden Sie eine Auswahl meiner Arbeit - probieren Sie die Anwendungen gerne aus.</p>
 <div class="portfolio-list">
   <app-portfolio-item
+    appObserverChild
+    [observer]="observer"
     *ngFor="
       let project of myProjects;
       let i = index;

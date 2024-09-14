@@ -1,9 +1,10 @@
-import { Component, Input, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Component, Input, ElementRef, HostListener, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: 'app-portfolio-item',
-  templateUrl: './portfolio-item.component.html',
-  styleUrl: './portfolio-item.component.scss'
+    selector: 'app-portfolio-item',
+    templateUrl: './portfolio-item.component.html',
+    styleUrl: './portfolio-item.component.scss',
+    standalone: true
 })
 export class PortfolioItemComponent implements OnInit{
   @Input() index!: number;
@@ -18,14 +19,17 @@ export class PortfolioItemComponent implements OnInit{
   };
   seqNo!: string;
   animationIsStarted = false;
+  animationDelay = 0;
+  
 
   constructor(private elRef: ElementRef) {}
+
   
   ngOnInit(): void {
     this.seqNo = (this.index + 1).toString().padStart(2,"0") + "/" + this.totalNumber.toString().padStart(2,"0");
   }
 
-  @HostListener('document:scroll', ['$event'])
+  /* @HostListener('document:scroll', ['$event'])
   public onViewportScroll() {
     const windowHeight = window.innerHeight;
     const boundingRectHost = this.elRef.nativeElement.getBoundingClientRect();
@@ -33,7 +37,7 @@ export class PortfolioItemComponent implements OnInit{
     if (boundingRectHost.top <= 200 || boundingRectHost.bottom < windowHeight) {
       setTimeout(() => {
         this.elRef.nativeElement.classList.add('is-active');
-      }, 250);
+      }, this.animationDelay);
     }
-  }
+  } */
 }

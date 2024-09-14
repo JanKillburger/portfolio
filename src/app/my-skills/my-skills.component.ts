@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-my-skills',
-  templateUrl: './my-skills.component.html',
-  styleUrl: './my-skills.component.scss'
+    selector: 'app-my-skills',
+    templateUrl: './my-skills.component.html',
+    styleUrl: './my-skills.component.scss',
+    standalone: true,
+    imports: [NgFor]
 })
 export class MySkillsComponent {
  mySkills = [

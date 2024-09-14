@@ -1,10 +1,14 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-say-hi',
-  templateUrl: './say-hi.component.html',
-  styleUrl: './say-hi.component.scss'
+    selector: 'app-say-hi',
+    templateUrl: './say-hi.component.html',
+    styleUrl: './say-hi.component.scss',
+    standalone: true,
+    imports: [FormsModule, RouterLink, NgIf]
 })
 export class SayHiComponent {
   userName = '';

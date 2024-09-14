@@ -1,11 +1,15 @@
 
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { NgStyle, NgIf, NgFor } from '@angular/common';
 
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrl: './menu.component.scss'
+    selector: 'app-menu',
+    templateUrl: './menu.component.html',
+    styleUrl: './menu.component.scss',
+    standalone: true,
+    imports: [RouterLink, NgStyle, NgIf, NgFor]
 })
 export class MenuComponent {
   bodyElement = document.querySelector('body');
@@ -26,7 +30,7 @@ export class MenuComponent {
       href: "about-me"
     },
     {
-      text: "Meine Kenntnisse",
+      text: "Kenntnisse",
       href: "my-skills"
     }, {
       text: "Port&shy;folio",

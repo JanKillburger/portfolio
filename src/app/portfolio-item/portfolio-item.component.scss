@@ -1,4 +1,7 @@
 @import "../../assets/styles/variables";
+:host {
+    --animation-duration: 350ms;
+}
 
 .project-wrapper {
     display: flex;
@@ -106,12 +109,12 @@
     .description {
         opacity: 1;
         transform: translate(0, 0);
-        transition: all 0.5s ease-in-out 0.5s;
+        transition: all var(--animation-duration) ease-in-out var(--animation-duration);
     }
 
     img {
         filter: saturate(1);
-        transition: all 0.5s;
+        transition: all var(--animation-duration);
     }
 
     .img-frame {
@@ -119,7 +122,7 @@
 
         .img-frame-arrow {
             visibility: visible;
-            transition: transform 0.5s ease-in-out 0.5s;
+            transition: transform var(--animation-duration) ease-in-out var(--animation-duration);
         }
     }
 }

@@ -3,8 +3,6 @@
 ########### CONFIG ###############
 
 $recipient = 'jkillburger@gmail.com'; # Bitte hier deine E-Mail angeben
-// $redirect = 'success.html';
-
 ########### CONFIG END ###########
 
 
