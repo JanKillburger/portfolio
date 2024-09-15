@@ -8,15 +8,14 @@
 }
 
 h1 {
-    hyphens: none;
     margin-block: 0;
 }
 
-@media (max-width: 550px) {
+/* @media (max-width: 550px) {
     h1 {
-        hyphens: manual;
+        hyphens: auto;
     }
-}
+} */
 
 .title-wrapper {
     margin-block: auto;

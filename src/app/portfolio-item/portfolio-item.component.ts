@@ -1,4 +1,5 @@
-import { Component, Input, ElementRef, HostListener, OnInit, AfterViewInit } from '@angular/core';
+import { Component, Input, ElementRef, HostListener, OnInit, AfterViewInit, inject, effect } from '@angular/core';
+import { TranslationService } from '../services/translation.service';
 
 @Component({
     selector: 'app-portfolio-item',
@@ -20,9 +21,18 @@ export class PortfolioItemComponent implements OnInit{
   seqNo!: string;
   animationIsStarted = false;
   animationDelay = 0;
-  
+  testBtn = '';
+  ts = inject(TranslationService)
 
-  constructor(private elRef: ElementRef) {}
+  constructor(private elRef: ElementRef) {
+    effect(() => {
+      if (this.ts.selectedLanguage() === 'de') {
+        this.testBtn = 'Demo';
+      } else {
+        this.testBtn = 'Test';
+      }
+    })
+  }
 
   
   ngOnInit(): void {

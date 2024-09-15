@@ -1,18 +1,11 @@
 <h2 id="portfolio" class="scroll-target">Port&shy;folio</h2>
-<p>Hier finden Sie eine Auswahl meiner Arbeit - probieren Sie die Anwendungen gerne aus.</p>
+<p>{{description}}</p>
 <div class="portfolio-list">
-  <app-portfolio-item
-    appObserverChild
-    [observer]="observer"
-    *ngFor="
+  <app-portfolio-item appObserverChild [observer]="observer" *ngFor="
       let project of myProjects;
       let i = index;
       let even = even;
       let odd = odd
-    "
-    [project]="project"
-    [index]="i"
-    [totalNumber]="myProjects.length"
-    [ngClass]="{ odd: odd, even: even }"
-  ></app-portfolio-item>
+    " [project]="project" [index]="i" [totalNumber]="myProjects.length"
+    [ngClass]="{ odd: odd, even: even }"></app-portfolio-item>
 </div>

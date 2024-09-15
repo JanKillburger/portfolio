@@ -132,6 +132,13 @@ h3 {
     padding-inline: $global-padding-inline;
 }
 
+button {
+  font: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .btn {
   font: inherit;
   background-color: transparent;

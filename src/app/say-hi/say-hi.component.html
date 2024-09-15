@@ -1,9 +1,9 @@
 <div class="contact-diagonal top-level-element"></div>
 <div class="main top-level-element">
-  <h2 id="say-hi" class="scroll-target">Kontakt</h2>
+  <h2 id="say-hi" class="scroll-target">{{contactLabel}}</h2>
   <div class="form-wrapper">
-    <p class="highlighted">Möchten Sie ein Projekt diskutieren?</p>
-    <p>Schicken Sie mir eine Nachricht und lassen Sie uns das Projekt angehen!</p>
+    <p class="highlighted">{{slogan1}}</p>
+    <p>{{slogan2}}</p>
     <form (ngSubmit)="sendMail()" #contactForm="ngForm">
       <div class="form-group">
         <div class="form-subgroub">
@@ -20,7 +20,7 @@
             [class.is-active]="name.valid"
           />
           <label [class.small-label]="nameHasFocus || name.value" for="name"
-            >Name</label
+            >{{nameLabel}}</label
           >
           <input
             (focus)="toggleFocus($event)"
@@ -53,7 +53,7 @@
             [class.is-active]="email.valid"
           />
           <label [class.small-label]="emailHasFocus || email.value" for="email"
-            >Email</label
+            >{{emailLabel}}</label
           >
           <input
             (focus)="toggleFocus($event)"
@@ -89,7 +89,7 @@
           <label
             [class.small-label]="messageHasFocus || message.value"
             for="message"
-            >Nachricht</label
+            >{{messageLabel}}</label
           >
           <textarea
             (focus)="toggleFocus($event)"
@@ -117,11 +117,11 @@
           id="privacy-policy-cb"
           [(ngModel)]="privacyPolicy"
           [disabled]="formSubmitted"
-        />Ich habe den
+        />{{dataPrivacyAdvisory1}}
         <a routerLink="legal-notice" fragment="data-privacy" class="text-link"
-          >Datenschutzhinweis gelesen</a
+          >{{dataPrivacyAdvisory2}}</a
         >
-        und stimme der Verarbeitung meiner Daten wie beschrieben zu. <span [class.alert-error]="!privacyPolicyCb.value">Erforderlich zum Senden einer Nachricht.</span>
+        {{dataPrivacyAdvisory3}} <span [class.alert-error]="!privacyPolicyCb.value">{{dataPrivacyAdivsory4}}</span>
       </p>
       <button
         type="submit"
@@ -130,7 +130,7 @@
           !(contactForm.valid && privacyPolicyCb.value && !formSubmitted)
         "
       >
-        Nachricht senden
+        {{sendMessageBtn}}
       </button>
       <div class="status-wrapper" *ngIf="statusMessage">
         <p>{{ statusMessage }}</p>

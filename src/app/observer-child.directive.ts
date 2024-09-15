@@ -13,4 +13,12 @@ export class ObserverChildDirective implements AfterViewInit {
     this.observer.observe(this.el.nativeElement)
   }
 
+  static ngTemplateContextGuard(dir: ObserverChildDirective, ctx: unknown): ctx is ObserverChildContext {
+    return true;
+  }
+
+}
+
+interface ObserverChildContext {
+  observer: IntersectionObserver;
 }

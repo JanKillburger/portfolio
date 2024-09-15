@@ -1,15 +1,16 @@
 
-import { Component } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgStyle, NgIf, NgFor } from '@angular/common';
+import { TranslationService } from '../services/translation.service';
 
 
 @Component({
-    selector: 'app-menu',
-    templateUrl: './menu.component.html',
-    styleUrl: './menu.component.scss',
-    standalone: true,
-    imports: [RouterLink, NgStyle, NgIf, NgFor]
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrl: './menu.component.scss',
+  standalone: true,
+  imports: [RouterLink, NgStyle, NgIf, NgFor]
 })
 export class MenuComponent {
   bodyElement = document.querySelector('body');
@@ -24,19 +25,45 @@ export class MenuComponent {
     "burger-menu3.png",
     "burger-menu4.png"
   ];
-  menuItems = [
-    {
-      text: "Über mich",
-      href: "about-me"
-    },
-    {
-      text: "Kenntnisse",
-      href: "my-skills"
-    }, {
-      text: "Port&shy;folio",
-      href: "portfolio"
-    }
-  ];
+  menuItems!: {text: string, href: string}[];
+  contactMe = ''
+  ts = inject(TranslationService)
+
+  constructor() {
+    effect(() => {
+      if (this.ts.selectedLanguage() === 'de') {
+        this.menuItems = [
+          {
+            text: "Über mich",
+            href: "about-me"
+          },
+          {
+            text: "Kenntnisse",
+            href: "my-skills"
+          }, {
+            text: "Port&shy;folio",
+            href: "portfolio"
+          }
+        ];
+        this.contactMe = 'Kontakt';
+      } else {
+        this.menuItems = [
+          {
+            text: "About me",
+            href: "about-me"
+          },
+          {
+            text: "My skills",
+            href: "my-skills"
+          }, {
+            text: "Port&shy;folio",
+            href: "portfolio"
+          }
+        ];
+        this.contactMe = 'Say hi'
+      }
+    })
+  }
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -55,11 +82,19 @@ export class MenuComponent {
     let icons = this.burgerMenuIcons;
     if (!isOpening) icons = icons.reverse();
     for (let i = 1; i < icons.length; i++) {
-      const icn = 'url("' + this.imgPath + icons[i] +'")';
+      const icn = 'url("' + this.imgPath + icons[i] + '")';
       setTimeout(() => {
         this.currentBurgerIcn = icn;
-      },(i + 1) * interval);
+      }, (i + 1) * interval);
     }
     if (!isOpening) icons = icons.reverse();
+  }
+
+  toggleLanguage() {
+    if (this.ts.selectedLanguage() === 'en') {
+      this.ts.changeLanguage('de')
+    } else {
+      this.ts.changeLanguage('en')
+    }
   }
 }
