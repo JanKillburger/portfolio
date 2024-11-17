@@ -24,7 +24,7 @@ export class AboutMeComponent {
             } else {
                 this.heading = 'About me';
                 this.contactMe = 'Contact me';
-                this.aboutMe = 'I am a full-stack web developer based in Stuttgart. ...';
+                this.aboutMe = 'I am a full-stack web developer based in Stuttgart. My main tech stack is TypeScript, Angular, Python and Django. Have a look at my portfolio to see a selection of my work. I initially found my way into app development via Microsoft\s Power Platform (e.g. Power Apps, Power Automate). Since then I have been an enthusiast for making people\'s work lives easier by providing user-friendly apps, developped in close cooperation with the future users.';
             }
     })
     }
