@@ -51,14 +51,14 @@ export class PortfolioComponent {
             appLink: "https://dabubble.jan-killburger.de",
             repLink: "https://github.com/JanKillburger/DaBubble"
           },
-          {
-            title: "Videoflix",
-            skills: ["Python", "Django", "Angular"],
-            desc: "Video-Streaming Website mit Admin-Panel zum Video-Upload mit Hintergrundverarbeitung in mehrere Auflösungen. Die Videoqualität im Stream passt sich automatisch auf Basis der verfügbaren Bandbreite an.",
-            imgPath: "assets/img/videoflix.png",
-            appLink: "https://jan-killburger.developerakademie.org/",
-            repLink: "https://github.com/JanKillburger/videoflix-backend"
-          }
+          // {
+          //   title: "Videoflix",
+          //   skills: ["Python", "Django", "Angular"],
+          //   desc: "Video-Streaming Website mit Admin-Panel zum Video-Upload mit Hintergrundverarbeitung in mehrere Auflösungen. Die Videoqualität im Stream passt sich automatisch auf Basis der verfügbaren Bandbreite an.",
+          //   imgPath: "assets/img/videoflix.png",
+          //   appLink: "https://jan-killburger.developerakademie.org/",
+          //   repLink: "https://github.com/JanKillburger/videoflix-backend"
+          // }
         ];
       } else {
         this.description = 'This is a sample of my work - feel free to test it.';
