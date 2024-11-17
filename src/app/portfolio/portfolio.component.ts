@@ -87,14 +87,14 @@ export class PortfolioComponent {
             appLink: "https://dabubble.jan-killburger.de",
             repLink: "https://github.com/JanKillburger/DaBubble"
           },
-          {
-            title: "Videoflix",
-            skills: ["Python", "Django", "Angular"],
-            desc: "Video streaming platform with Django admin panel to upload new videos with background processing to multiple resolutions.",
-            imgPath: "assets/img/videoflix.png",
-            appLink: "https://jan-killburger.developerakademie.org/",
-            repLink: "https://github.com/JanKillburger/videoflix-backend"
-          }
+          // {
+          //   title: "Videoflix",
+          //   skills: ["Python", "Django", "Angular"],
+          //   desc: "Video streaming platform with Django admin panel to upload new videos with background processing to multiple resolutions.",
+          //   imgPath: "assets/img/videoflix.png",
+          //   appLink: "https://jan-killburger.developerakademie.org/",
+          //   repLink: "https://github.com/JanKillburger/videoflix-backend"
+          // }
         ];
       }
     })
